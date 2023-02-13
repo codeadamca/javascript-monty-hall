@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Monty Hall Problem</title>
+</head>
+<body>
+
+    <h1>The Monty Hall Problem</h1>
+
+    <script>
+
+        let repeat = 10000;
+        let stay = 0;
+
+        for(let i = 0; i < repeat; i++)
+        {
+
+            // Step 1
+            // Randomly choose a door to put the prize behind
+            let winningDoor = Math.ceil(Math.random() * 3);
+            document.write("<p>The car is behind door number " + winningDoor + "</p>");
+
+            // Step 2
+            // Randomly have the winner choose a door
+            let choice = Math.ceil(Math.random() * 3);
+            document.write("<p>The winner chooses door number " + choice + "</p>");
+
+            // Step 3
+            // Randomly remove a non-choice non-winning door 
+            let remove = Math.ceil(Math.random() * 3);
+
+            while(remove == choice || remove == winningDoor)
+            {
+                remove = Math.ceil(Math.random() * 3);
+            }
+
+            document.write("<p>The host removes door " + remove + "</p>");
+
+            // Check STAY or SWTICH
+            if(choice == winningDoor)
+            {
+                stay++;
+                document.write("<p>The winning choice is STAY</p>");
+            }
+            else
+            {
+                document.write("<p>The winning choice is SWITCH</p>");
+            }
+
+        }
+
+        document.write("<p>Staying would have won " + Math.round((stay / repeat) * 100) + " percent of the time!<?p>");
+
+
+    </script>
+    
+</body>
+</html>
