@@ -12,9 +12,13 @@
 
     <script>
 
+        // Define a variable to determine how many times to repeat the script
         let repeat = 10000;
+
+        // Define a variable to track how many times stay would be the right choice
         let stay = 0;
 
+        // Loop using the repeat variable
         for(let i = 0; i < repeat; i++)
         {
 
@@ -32,14 +36,15 @@
             // Randomly remove a non-choice non-winning door 
             let remove = Math.ceil(Math.random() * 3);
 
+            // If the removing door is the winning door or the chosen door, then 
+            // choose another random door
             while(remove == choice || remove == winningDoor)
             {
                 remove = Math.ceil(Math.random() * 3);
             }
-
             document.write("<p>The host removes door " + remove + "</p>");
 
-            // Check STAY or SWTICH
+            // Check if the best answer would have been stay or switch
             if(choice == winningDoor)
             {
                 stay++;
@@ -52,8 +57,8 @@
 
         }
 
-        document.write("<p>Staying would have won " + Math.round((stay / repeat) * 100) + " percent of the time!<?p>");
-
+        // Output the percent of times stay would be the right choice
+        document.write("<p>Staying would have won " + Math.round((stay / repeat) * 100) + " percent of the time!</p>");
 
     </script>
     
