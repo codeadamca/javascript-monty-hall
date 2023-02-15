@@ -12,10 +12,14 @@
 
     <script>
 
-        let repeat = 50000;
+        // Define a variable to determine how many times to repeat the script
+        let repeat = 10000;
+
+        // Define a variable to track how many times stay would be the right choice
         let stay = 0;
 
-        for(let i = 0; i < repeat; i ++)
+        // Loop using the repeat variable
+        for(let i = 0; i < repeat; i++)
         {
             
             // Step 1
@@ -37,6 +41,10 @@
             /*
             let doors = [];
             for(let i = 1; i <= 3; i ++)
+
+            // If the removing door is the winning door or the chosen door, then 
+            // choose another random door
+            while(remove == choice || remove == winningDoor)
             {
                 if(i != winningDoor && i != choice)
                 {
