@@ -18,7 +18,7 @@ This repo will use JavaScript to prove the Monty Hall problem.
 
 ## Repo Resources
 
-* [Visual Studio Code](https://code.visualstudio.com/) or [Brackets](http://brackets.io/) (or any code editor)
+* [Visual Studio Code](https://code.visualstudio.com/)
 * [The Monty Hall Problem](https://www.youtube.com/watch?v=4Lb-6rxZxx0)
 
 <a href="https://codeadam.ca">
