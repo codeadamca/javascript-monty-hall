@@ -12,7 +12,9 @@ Is it to your advantage to switch your choice?
 
 This repo will use JavaScript to prove the Monty Hall problem.
 
-## Tutorial Requirements:
+***
+
+## Repo Resources
 
 * [Visual Studio Code](https://code.visualstudio.com/) or [Brackets](http://brackets.io/) (or any code editor)
 * [The Monty Hall Problem](https://www.youtube.com/watch?v=4Lb-6rxZxx0)
