@@ -21,6 +21,7 @@ This repo will use JavaScript to prove the Monty Hall problem.
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [The Monty Hall Problem](https://www.youtube.com/watch?v=4Lb-6rxZxx0)
 
+<br>
 <a href="https://codeadam.ca">
-<img src="https://codeadam.ca/images/code-block.png" width="100">
+<img src="https://cdn.codeadam.ca/images@1.0.0/codeadam-logo-coloured-horizontal.png" width="200">
 </a>
