@@ -12,6 +12,51 @@
 
     <script>
 
+    let switchCounter = 0;
+    let stayCounter = 0;
+
+    for(let i = 0; i < 1000; i ++)
+    {
+
+        let car = Math.ceil(Math.random() * 3);
+        document.write("<p>The car is behind door number " + car + "</p>");
+
+        let choice = Math.ceil(Math.random() * 3);
+        document.write("<p>The contestant choses door number " + choice + "</p>");
+
+        /*
+        let remove = Math.ceil(Math.random() * 3);
+        while(remove == car || remove == choice)
+        {
+            remove = Math.ceil(Math.random() * 3);
+        }
+        */
+
+        let remove;
+        do
+        {
+            remove = Math.ceil(Math.random() * 3);
+        }
+        while(remove == car || remove == choice);
+        document.write("<p>The host removes door number " + remove + "</p>");
+
+        if(choice == car)
+        {
+            stayCounter ++;
+            document.write("<p style='color:red;'>The contestant should stay</p>");
+        }
+        else
+        {
+            switchCounter ++;
+            document.write("<p style='color:green;'>The contestant should switch</p>");
+        }
+
+        document.write("<hr>");
+
+    }
+
+    let percent = Math.round(switchCounter / 1000 * 100);
+    document.write("<h2>Swithing was correct " + percent + "% of the time</h2>");
         
     </script>
     
