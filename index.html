@@ -12,10 +12,53 @@
 
     <script>
 
-    // Place teh car in a random door
-    let car = Math.ceil(Math.random() * 3);
-    document.write("The car is in door number " + car);
+    let switchCounter = 0;
+
+    for(let i = 0; i < 10000; i ++)
+    {
+
+        // Place teh car in a random door
+        let car = Math.ceil(Math.random() * 3);
+        document.write("<p>The car is in door number " + car + "</p>");
         
+        // Contestant chooses a door
+        let choice = Math.ceil(Math.random() * 3);
+        document.write("<p>The contestant chooses door number " + choice + "</p>");
+
+        // Host removes a door that is NOT the choosen door or the car door
+        /*
+        let remove = Math.ceil(Math.random() * 3);
+        while(remove == car || remove == choice)
+        {
+            remove = Math.ceil(Math.random() * 3);
+        }
+        */
+
+        let remove;
+
+        do
+        {
+            remove = Math.ceil(Math.random() * 3);
+        }
+        while(remove == car || remove == choice);
+
+        document.write("<p>The host removes door number " + remove + "</p>");
+
+        // Output the better choice
+        if(car == choice) {
+            document.write("<p style='color:red;'>The contestant should stay!</p>");
+        } else {
+            document.write("<p style='color:green;'>The contestant should switch!</p>");
+        }
+
+        if(choice != car) switchCounter ++;
+
+    }
+
+    let percent = switchCounter / 10000 * 100;
+
+    document.write("<p>" + percent + "% of the time switch was correct!</p>");
+
     </script>
     
 </body>
